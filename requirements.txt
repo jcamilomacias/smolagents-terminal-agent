@@ -1,0 +1,8 @@
+smolagents[gradio]==1.24.0
+python-dotenv
+requests
+pytz
+PyYAML
+markdownify
+duckduckgo_search
+pandas
