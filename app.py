@@ -82,14 +82,5 @@ agent = CodeAgent(
 
 
 if __name__ == "__main__":
-    print("Agent ready. Type your task below (Ctrl+C to exit).\n")
-    while True:
-        try:
-            task = input("You: ").strip()
-            if not task:
-                continue
-            answer = agent.run(task)
-            print(f"\nAgent: {answer}\n")
-        except KeyboardInterrupt:
-            print("\nExiting.")
-            break
+    from Gradio_UI import GradioUI
+    GradioUI(agent).launch()
