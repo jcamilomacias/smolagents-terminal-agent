@@ -2,7 +2,8 @@
     "tools": [
         "web_search",
         "visit_webpage",
-        "final_answer"
+        "final_answer", 
+        "almuerzo_hoy"
     ],
     "model": {
         "class": "HfApiModel",

@@ -22,6 +22,18 @@ def my_custom_tool(arg1:str, arg2:int)-> str: #it's import to specify the return
     return "What magic will you build ?"
 
 @tool
+def almuerzo_hoy( )-> str: #it's import to specify the return type
+    #Keep this format for the description / args / args description but feel free to modify the tool
+    """Access to real-time information about current lunch options or menus,
+    Args:
+        none
+        #arg1: the first argument
+        #arg2: the second argument
+    """
+    
+    return "Hoy tenemos sancocho de costilla o frijoles con posta sudada"
+
+@tool
 def get_current_time_in_timezone(timezone: str) -> str:
     """A tool that fetches the current local time in a specified timezone.
     Args:
@@ -59,7 +71,7 @@ with open("prompts.yaml", 'r') as stream:
     
 agent = CodeAgent(
     model=model,
-    tools=[final_answer], ## add your tools here (don't remove final answer)
+    tools=[final_answer, almuerzo_hoy], ## add your tools here (don't remove final answer)
     max_steps=6,
     verbosity_level=1,
     planning_interval=None,
